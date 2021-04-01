@@ -6,7 +6,7 @@ services:
   previewPlan: starter
   name: express-backend
   env: node
-  buildCommand: cd backend && yarn
+  buildCommand: return 1
   startCommand: cd backend && yarn start
   envVars:
   - key: MY_API_KEY
