@@ -6,16 +6,12 @@ services:
   previewPlan: starter
   name: express-backend
   env: node
-  buildCommand: cd backend && yarn
+  buildCommand: false
   startCommand: cd backend && yarn start
   envVars:
   - key: MY_API_KEY
     value: production-api-key
     previewValue: test-api-key
-  - key: DB_CONNECTION_STRING
-    fromDatabase:
-      name: postgres_db
-      property: connectionString
 - type: web
   name: render-todo
   env: static
@@ -27,9 +23,3 @@ services:
       type: web
       name: express-backend
       property: host
-databases:
-- name: postgres_db
-  databaseName: test_db
-  user: test_user
-  plan: standard
-  previewPlan: starter
