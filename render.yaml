@@ -2,7 +2,7 @@ pullRequestPreviewsEnabled: true
 pullRequestPreviewsExpireAfterDays: 3
 services:
 - type: web
-  plan: starter plus
+  plan: starter
   previewPlan: starter
   name: express-backend
   env: node
